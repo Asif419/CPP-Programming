@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int add(int one, int two)
+{
+    return one+two;
+}
+
+int main()
+{
+    int one, two;
+    cout << "Please enter your two numbers: " << endl;
+    cin >> one >> two;
+    int sum = add(one, two);
+    cout << "Sum is: " << sum;
+    return 0;
+}
+---------------
+//Function Overloading
+// same name different arguments
+int test() { }
+int test(int a) { }
+float test(double a) { }
+int test(int a, double b) { }
+--------------
+//dafault arguments
+#include <iostream>
+using namespace std;
+
+// defining the default arguments
+void display(char = '*', int = 3);
+
+int main() {
+    int count = 5;
+
+    cout << "No argument passed: ";
+    // *, 3 will be parameters
+    display(); 
+    
+    cout << "First argument passed: ";
+     // #, 3 will be parameters
+    display('#'); 
+    
+    cout << "Both arguments passed: ";
+    // $, 5 will be parameters
+    display('$', count); 
+
+    return 0;
+}
+
+void display(char c, int count) {
+    for(int i = 1; i <= count; ++i)
+    {
+        cout << c;
+    }
+    cout << endl;
+}
