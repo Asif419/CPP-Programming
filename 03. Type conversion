@@ -1,0 +1,29 @@
+//implicit type conversion
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number;
+    double numberOne;
+    cout << "Please enter a number: ";
+    cin >> number;
+    numberOne = number;
+    cout << "Number = " << number << " NumberOne = " << numberOne;
+
+    return 0;
+}
+---------------
+//explicit conversion
+#include <iostream>
+using namespace std;
+int main()
+{
+    int one;
+    double two;
+    cin >> two;
+    one = (int) two;
+    cout << one;
+    return 0;
+}
+---------------
