@@ -1,0 +1,53 @@
+//class & object
+#include <iostream>
+using namespace std;
+
+class Student
+{
+private:
+    double one, two;
+
+public:
+    void giveValue(double o, double t)
+    {
+        one = o;
+        two = t;
+    }
+    double average()
+    {
+        return ((one + two) / 2);
+    }
+};
+
+int main()
+{
+    Student s1;
+    s1.giveValue(4 , 4);
+    cout << "Average number is: " << s1.average() << endl;
+    return 0;
+}
+----------------
+//parameterized constructor
+#include <iostream>
+using namespace std;
+
+class Student
+{
+private:
+    double one, two;
+public: 
+    Student(double o, double t)
+    {
+        one = o;
+        two = t;
+        double average = (one + two) / 2;
+        cout << "Average number is: " << average << endl;
+    }
+};
+
+int main()
+{
+    Student s1(47.3, 39.2);
+    return 0;
+}
+---------------
