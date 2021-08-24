@@ -120,4 +120,24 @@ void swap(int &a, int &b)
     b = temp;
 }
 --------------
-||T\|
+//passing by reference with pointer
+#include <iostream>
+using namespace std;
+void swap(int* a, int* b);
+int main()
+{
+    int a = 1, b = 2;
+    cout << "Before swapping: a = " << a << " b = " << b << " " << endl;
+    swap (&a, &b);
+    cout << "After swapping: a = " << a << " b = " << b << " " << endl;
+    return 0;
+}
+
+void swap(int* a, int* b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+------------
