@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int number;
+    cout << "Enter array size: " << endl;
+    cin >> number;
+    int a[number];
+    //taking number in a array
+    for(int i = 0; i<number; i++)
+    {
+        cout << "Enter " << i+1 << " element: ";
+        cin >> a[i]; 
+    }
+    //printing number in a array
+    for(const int &n : a)
+    {
+        cout << n << " ";
+    }
+
+
+    return 0;
+}
+--------------------
+//2D array input & output
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, j, a[2][3];
+
+    //taking input
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            cout << "a[" << i << "]"
+                 << "[" << j << "] :";
+            cin >> a[i][j];
+        }
+    }
+    //print array item
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            cout << "a[" << i << "]"
+                 << "[" << j << "] :" << a[i][j] << endl;
+        }
+    }
+
+    return 0;
+}
