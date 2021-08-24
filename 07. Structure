@@ -1,0 +1,82 @@
+//structure example
+#include <iostream>
+using namespace std;
+
+struct person
+{
+    string name;
+    int age;
+};
+
+int
+main()
+{
+    person p;
+    cout << "Enter your name: ";
+    getline(cin, p.name);
+    cout << "Enter your age: ";
+    cin >> p.age;
+
+    cout << "Your name: " << p.name << " Your age: " << p.age << endl;
+    return 0;
+}
+--------------
+//function & structure
+#include <iostream>
+using namespace std;
+
+struct person
+{
+    string name;
+    int age;
+};
+
+person getinfo(person q);
+void show(person r);
+
+int main()
+{
+    person p;
+    p = getinfo(p);
+    show(p);
+    return 0;
+}
+
+person getinfo(person q)
+{
+    cout << "Enter your name: ";
+    getline(cin, q.name);
+    cout << "Enter your age: ";
+    cin >> q.age;
+
+    return q;
+}
+
+void show(person r)
+{
+    cout << "Your name: " << r.name << " Your age: " << r.age << endl;
+}
+-------------
+// pointer to structure
+#include <iostream>
+using namespace std;
+
+struct Height
+{
+    int feet;
+    float inch;
+};
+
+int main()
+{
+    Height *hptr, h;
+    hptr = &h;
+    cout << "Feet: ";
+    cin >> hptr->feet;
+    cout << "Inchi: ";
+    cin >> (*hptr).inch;
+
+    cout << "Your height is: " << hptr->feet << "'" << (*hptr).inch << "''"; 
+    return 0;
+}
+-------------
