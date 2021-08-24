@@ -80,3 +80,47 @@ int main()
     return 0;
 }
 -------------
+//ennmeration
+#include <iostream>
+using namespace std;
+//for selecting a character we will give a points. those points are
+enum Card
+{
+    spades = 4,
+    hearts = 3,
+    diamonds = 2,
+    club = 1
+};
+
+int main()
+{
+    Card check;
+    char a;
+    int point;
+    cout << "Enter a/b/c/d: ";
+    cin >> a;
+    if (a == 'a')
+    {
+        check = spades;
+        point = check;
+    }
+    else if (a == 'b')
+    {
+        check = hearts;
+        point = check;
+    }
+    else if (a == 'c')
+    {
+        check = diamonds;
+        point = check;
+    }
+    else if (a == 'd')
+    {
+        check = club;
+        point = check;
+    }
+
+    cout << check;
+    return 0;
+}
+-------------
